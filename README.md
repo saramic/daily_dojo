@@ -6,6 +6,7 @@ Coding related daily practice to improve muscle memory of various techniques.
 
 * [vi in the browser](#vi-in-the-browser) ([Vimium](http://vimium.github.io/) for chrome)
 * [ruby TDD kata](#ruby-tdd-kata) (TDD - Test Driven Development)
+* [Neovim autorun tests](#neovim-autorun-tests)
 
 ## Technique details
 
@@ -137,4 +138,32 @@ Tennis
 ```
   1. **Refactor** - maybe too early on at this stage?
   1. continue **Red**, **Green**, **Refactor** till problem complete
+
+### Neovim autorun tests
+
+Assuming you have neovim installed and want to write ruby tests in one split,
+implementation in another split and a terminal with continually running tests
+in another.
+
+**Dojo exercise**
+
+  1. assuming a test setup as per [ruby TDD kata]
+  1. add guard
+     ```
+     cat >> Gemfile
+     gem "guard"
+     gem "guard-rspec"
+     ```
+     bundle
+  1. `guard init rspec` configure guard
+  1. `vi` open neovim
+  1. `:e spec/tennis_spec.rb` edit the spec file
+  1. `:vsplit lib/tennis.rb` edit the implementation file
+  1. `:vsplit | terminal` vsplit a terminal, or `vs | te`
+  1. `guard` in terminal
+  1. `<CTRL>-\ <CTRL>-n` to go to navigation mode in terminal under neovim
+  1. `<CTRL>-w l` to jump to a different split (l for one to right)
+  1. `:w` save the test and the terminal should re-run tests
+  1. `<CTRL>-w h` to jump back to the left
+  1. `i` to put terminal into insert mode
 
