@@ -5,9 +5,22 @@ Coding related daily practice to improve muscle memory of various techniques.
 ## Techniques
 
 * [vi in the browser](#vi-in-the-browser) ([Vimium](http://vimium.github.io/) for chrome)
+  - _5 min_
+  - muscle memory for basic usefull key combinations
+
 * [ruby TDD kata](ruby_tdd/README.md) (TDD - Test Driven Development)
+  - _15 min - 2 hours_
+  - muscle memory for ES6 project setup
+  - muscle memory for TDD - red, green, refactor style problem solving
+
 * [ES6 TDD kata](es6_tdd/README.md)
+  - _15 min - 2 hours_
+  - muscle memory for ES6 project setup
+  - muscle memory for TDD - red, green, refactor style problem solving
+
 * [Neovim autorun tests](#neovim-autorun-tests)
+  - _5 min_
+  - muscle memory for basic usefull key combinations
 
 ## Technique details
 
