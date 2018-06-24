@@ -254,18 +254,16 @@ Vimium - mouse less control of the browser
 
 # Resources
 
-[
-  What is Rote learning
-](https://education.cu-portland.edu/blog/classroom-resources/what-is-rote-learning/)
+- [What is Rote learning](https://education.cu-portland.edu/blog/classroom-resources/what-is-rote-learning/)
 
-- presneting slides from vim with [
-  presenting.vim
-](https://github.com/sotte/presenting.vim)
+- presneting slides from vim with [presenting.vim](https://github.com/sotte/presenting.vim)
 
 - read line wrapping - rlwrap
 ```
 brew install rlwrap
 ```
+
+- display keys typed [KeyCastr](https://github.com/keycastr/keycastr)
 
 
 # Thank You
