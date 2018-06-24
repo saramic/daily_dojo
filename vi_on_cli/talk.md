@@ -168,6 +168,13 @@ v             # open vi editor
 
 * ruby program
 
+    ```sh
+    ruby -e 'require "readline"; \
+    while line = Readline.readline("> ", true); \
+    p line; \
+    end;'
+    ```
+
 
 # Iterative exploration
 
