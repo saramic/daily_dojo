@@ -221,7 +221,7 @@ Vimium - mouse less control of the browser
 
   rote != higher level thinking
 
-  rote is corners stone of higher level thinking
+  rote is corner stone of higher level thinking
 
   free up your brain
     to make major leaps
