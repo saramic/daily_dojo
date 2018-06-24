@@ -4,6 +4,8 @@ Coding related daily practice to improve muscle memory of various techniques.
 
 ## Techniques
 
+* [vi on commandline](vi_on_cli/talk.md)
+
 * [vi in the browser](#vi-in-the-browser) ([Vimium](http://vimium.github.io/) for chrome)
   - _5 min_
   - muscle memory for basic usefull key combinations
