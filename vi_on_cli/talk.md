@@ -22,22 +22,45 @@
     "Come talk to me"
 
 
+# Diversity
+
+
 # Rote learning
 
   - alphabet
   - numbers
   - ride a bike
   - times tables
+  - knitting
+
+# Test
+
+stop yourself from reading the next slide
+
+
+#
+
+  ruby
+
+
+#
+
+  beer
+
+
+# Rote learning
+
   - language
 
-  important to engage in higher level thinking
+  rote learnt skills are important
+  to engage in higher level thinking
 
 
 # Second nature as a programmer
 
   - touch typing
   - keyboard shortcuts
-  - language
+  - language (ruby, JS)
   - technique - TDD
 
 
@@ -50,11 +73,22 @@
 
   - slackware linux install
   - 25 floppy disks
+  - hunt and peck typing 
 
 
-# Why VI?
+# Where did I start?
 
-  ex line editor
+  - slackware linux install
+  - 25 floppy disks
+  - hunt and peck typing 
+
+  - but I had vi
+    - that was my super power
+
+
+# Why VI is called VI?
+
+  ex = line editor
 
 
 # VI = VIsual
@@ -70,36 +104,266 @@
   :q
 
 
-# Demo - AdventOfCode 2017
+# Demo - what is vi
 
-Day 4 High-Entropy Passphrases
-
-  don't duplicate words
-
-  cat dog mouse VALID
-  cat dog cat   NOT VALID
-
-
-# What we did
-
-  **Iterative Exploration**
-
-  1. test case
-  1. feed to ruby code
-  1. perform calculation
-  1. summarize calculation
-  1. run for actual data file
+```sh
+vi            # open vi editor
+i             # insert mode
+              #   enter text
+ESC           # normal mode
+              #   special commands
+h j k l       # ⬅ ⬇ ⬆ ➡
+:             # ex mode
+/             # search
+n             # next match
+:q!           # quit without saving
+```
 
 
-# Answer - AdventOfCode 2017
+# Shortcuts on the command line
 
-data
+```sh
+⬆             # previous command
+⬇             # next command
+CTRL A        # beginning of line
+CTRL E        # end of line
+CTRL B        # back a word
+CTRL F        # forward a word
+CTRL R        # reverse search
+```
 
-    curl 'http://adventofcode.com/2017/day/4/input' \
-      -H "Cookie: session=${ADVENT_OF_CODE_COOKIE}" > day4.txt
+# Emacs
 
-answer  open http://adventofcode.com/2017/day/4
-result  open http://adventofcode.com/2017/leaderboard/day/4 ~3min
+Default bash option on
+the command line
+
+```sh
+set -o | egrep 'vi |emacs'
+
+emacs          	on
+vi             	off
+```
+
+# Vi - on the command line
+
+```sh
+set -o vi
+
+set -o | egrep 'vi |emacs'
+emacs          	off
+vi             	on
+```
+
+
+# demo - vi on command line
+
+```sh
+set -o vi
+ESC             # normal mode
+/               # search
+cw              # change word
+u  .            # undo and redo
+^  $            # beginning and end
+w  W            # word and whitespace word
+b  B            # back a word
+y               # yank (copy) to end
+p               # paste
+ct<char>        # cut to character
+
+set -o emacs    # get me out of here
+```
+
+
+# 1, 2, 3 example
+
+
+# 1, 2, 3 example
+
+  - pinned new actions to existing
+
+  rote != higher level thinking
+
+  rote is corner stone of
+    higher level thinking
+
+  free up your brain
+    to make major leaps
+    in leaerning
+
+
+# Rote learning
+
+  1. come up with a script
+    ```
+    set -o vi
+    rube -e 'puts "hello"'
+    <ESC> k $ b i
+     RORO
+    <RETURN>
+    set -o emacs
+    ```
+  1. repeat
+
+
+# Hey you said VI everywhere!
+
+  - [  ] main editor
+
+
+# Hey you said VI everywhere!
+
+  - [❌] main editor
+
+
+# Hey you said VI everywhere!
+
+  - [❌] main editor
+  - [  ] browser extension (vimium)
+
+
+# Hey you said VI everywhere!
+
+  - [❌] main editor
+  - [❌] browser extension (vimium)
+
+
+# Hey you said VI everywhere!
+
+  - [❌] main editor
+  - [❌] browser extension (vimium)
+  - [  ] slide (presenting.vim)
+
+# Hey you said VI everywhere!
+
+  - [❌] main editor
+  - [❌] browser extension (vimium)
+  - [❌] slide (presenting.vim)
+
+
+# Hey you said VI everywhere!
+
+  - [❌] main editor
+  - [❌] browser extension (vimium)
+  - [❌] slide (presenting.vim)
+  - [  ] anywhere there is readline!
+
+
+# Hey you said VI everywhere!
+
+  - [❌] main editor
+  - [❌] browser extension (vimium)
+  - [❌] slide (presenting.vim)
+  - [👍] anywhere there is readline!
+
+
+# Ruby program input
+
+```sh
+ruby -e '\
+require "readline" \
+while line = Readline.readline("> ", true) \
+  p line \
+end'
+```
+
+
+# vi on command line
+
+  * iterative exploration
+      * find some data
+      * process it
+      * process it some more
+      * print a result
+  * laggy connections
+
+
+# REPL for various languages
+
+  * irb             # ruby REPL
+  * rails console
+  * python
+  * lein repl       # clojure REPL
+
+
+# Not all REPL support ReadLine
+
+  * node
+  * iex
+
+  ```sh
+
+    brew install rlwrap
+
+    rlwrap --always-readline node
+    rlwrap --always-readline iex
+
+  ```
+
+
+# Postgresql database
+
+  ```sh
+
+    psql
+
+    cat >> ~/.inputrc
+    set editing-mode vi
+
+  ```
+
+
+# Mysql database
+
+  ```sh
+
+    mysql
+
+    cat >> ~/.editrc
+    bind -v
+
+  ```
+
+* or mash the keyboard
+
+<ESC> <ENTER> x 2
+
+
+# Iterative exploration example
+
+  House price comparison
+  between 2 suburbs in Melbourne
+
+# house price comparison
+
+* [docs](http://webtools.realestate.com.au/configuring-widgets-included-via-javascript/)
+* query for house in richmond
+```
+QUERY='\{"channel":"buy","localities":\[\{"locality":"Richmond","subdivision":"VIC","postcode":"3121"\}\],"filters":\{"propertyTypes":\["house"\]\}\}'
+```
+* run query
+```
+curl "http://services.realestate.com.au/services/listings/search?query=$QUERY"
+```
+
+# house price comparison
+
+```
+cat richmond.json | jq
+  | jq 'keys'
+  | jq '.tieredResults[] | keys'
+  | jq '.tieredResults[].results | keys'
+  | jq '.tieredResults[].results[] | [.title, .price]'
+
+cat richmond.json |
+  jq '.tieredResults[].results[].price.display'
+```
+
+
+# house price comparison
+
+```
+cat northcote.json | jq '.tieredResults[].results[].price.display' | ruby -e 'prices = ARGF.read.split("\n").map{|price| price[/\$([\d,m\.]+)/, 1] }.compact.map{|price| price.gsub(/,/, "") }.map{|price| (price =~ /m/) ? (price.to_f * 1_000_000) : price}.map(&:to_i) ; p prices; p prices.sum/prices.count'
+```
 
 
 # What we learnt?
@@ -143,115 +407,6 @@ y4w           # yank 4 words
 v             # open vi editor
 
 
-# Iterative exploration
-
-* building up expressions in programming language
-    irb             # ruby REPL
-    rails console
-    python
-    lein repl       # clojure REPL
-
-
-# Iterative exploration
-
-* not all REPL use ReadLine
-  * node
-  * iex
-```
-  brew install rlwrap
-
-  rlwrap --always-readline node
-  rlwrap --always-readline iex
-```
-
-# Anything using ReadLine
-
-* ruby program
-
-    ```sh
-    ruby -e 'require "readline"; \
-    while line = Readline.readline("> ", true); \
-    p line; \
-    end;'
-    ```
-
-
-# Iterative exploration
-
-* buidling up database query
-```
-psql
-
-cat >> ~/.inputrc
-set editing-mode vi
-```
-
-
-# Iterative exploration
-
-* buidling up database query
-```
-mysql
-
-cat >> ~/.editrc
-bind -v
-```
-
-* or mash the keyboard
-
-<ESC> <ENTER> x 2
-
-
-# Great for laggy connections
-
-
-# Demo - vi in browser
-
-
-# What we learnt
-
-Vimium - mouse less control of the browser
-
-# 1, 2, 3 example
-
-
-# 1, 2, 3 example
-
-  - pinned new actions to existing
-
-  rote != higher level thinking
-
-  rote is corner stone of higher level thinking
-
-  free up your brain
-    to make major leaps
-    in leaerning
-
-# Rote learning
-
-  1. come up with a script
-    ```
-    set -o vi
-    rube -e 'puts "hello"'
-    <ESC> k $ b i
-     RORO
-    <RETURN>
-    set -o emacs
-    ```
-  1. repeat
-
-
-# Habitual learning
-
-  1. almost cargo cult
-
-
-# What are you going to have as second nature?
-
-  1. vi shortcuts
-  1. touch typing
-  1. problem solving with TDD
-
 # Resources
 
 - [What is Rote learning](https://education.cu-portland.edu/blog/classroom-resources/what-is-rote-learning/)
@@ -266,6 +421,13 @@ brew install rlwrap
 - display keys typed [KeyCastr](https://github.com/keycastr/keycastr)
 
 
+# Your super power?
+
+  * vi shortcuts
+  * touch typing
+  * problem solving with TDD
+
+
 # Thank You
 
   Michael Milewski
@@ -276,46 +438,4 @@ brew install rlwrap
 This presentation daily_dojo repo on github
   https://github.com/saramic/daily_dojo
 
-
-# Feedback 25/6/2018
-
-- what is fizz buzz?
-- talk too fast
-- what does it mean to set command line as vi
-  - but what does that mean
-- line editor explaination was good
-- curl command - threw people
-  - what am i doing
-- what is emacs
-- is emacs the default setting
-- what is a regex? maybe ask the croud
-- too fast
-- pause at end of command
-  - go over it again
-- can the audience keep up
-- what is a problem I am solving?
-  - make sure every one gets it
-- what is normal mode? what are the modes?
-  - ex mode,
-  - insert mode,
-  - visual mode and
-  - block mode
-- which am I using
-- in vi editor cut word too quickly
-- aim: what can someone take away who has not used vim?
-- how does open work? to open url?
-- maybe describe "this is the problem how quick
-  can you solve it" solve with vi this quick
-  Mention at the start?
-- what is a REPL Read Eval Print Loop
-- ruby readline program was way too fast
-- maybe slow down
-- vimium - is it unusal why?
-- too fast
-- what are the benefits of vimium? over page up/down?
-- 1, 2, 3 game was good and explained learning, maybe
-  run it earlier on? definitely good
-- make people part of the talk
-- get audience to be more involved
-- judge it on the day as to the level of complexity
 
