@@ -22,68 +22,32 @@
     "Come talk to me"
 
 
-# Diversity
+# VI everywhere
+
+  "What's your super power"
+
+  doing a talk is easy, ... right?
 
 
-# Rote learning
+# VI everywhere
 
-  - alphabet
-  - numbers
-  - ride a bike
-  - times tables
-  - knitting
+  "What's your super power"
 
-# Test
+  doing a talk is easy, ... right?
 
-stop yourself from reading the next slide
+  1. have an objective
+  2. tell a story
+  3. MVP and iterate, start early
 
 
-#
+# VI on the command line
 
-  ruby
-
-
-#
-
-  beer
+  "still a super power"
 
 
-# Rote learning
+# What is VI
 
-  - language
-
-  rote learnt skills are important
-  to engage in higher level thinking
-
-
-# Second nature as a programmer
-
-  - touch typing
-  - keyboard shortcuts
-  - language (ruby, JS)
-  - technique - TDD
-
-
-# Where do we start?
-
-  puts "hello world"
-
-
-# Where did I start?
-
-  - slackware linux install
-  - 25 floppy disks
-  - hunt and peck typing 
-
-
-# Where did I start?
-
-  - slackware linux install
-  - 25 floppy disks
-  - hunt and peck typing 
-
-  - but I had vi
-    - that was my super power
+  an editor
 
 
 # Why VI is called VI?
@@ -116,46 +80,12 @@ h j k l       # ⬅ ⬇ ⬆ ➡
 :             # ex mode
 /             # search
 n             # next match
+:s///         # substitute
 :q!           # quit without saving
 ```
 
 
-# Shortcuts on the command line
-
-```sh
-⬆             # previous command
-⬇             # next command
-CTRL A        # beginning of line
-CTRL E        # end of line
-CTRL B        # back a word
-CTRL F        # forward a word
-CTRL R        # reverse search
-```
-
-# Emacs
-
-Default bash option on
-the command line
-
-```sh
-set -o | egrep 'vi |emacs'
-
-emacs          	on
-vi             	off
-```
-
-# Vi - on the command line
-
-```sh
-set -o vi
-
-set -o | egrep 'vi |emacs'
-emacs          	off
-vi             	on
-```
-
-
-# demo - vi on command line
+# Demo - vi on command line
 
 ```sh
 set -o vi
@@ -169,15 +99,60 @@ b  B            # back a word
 y               # yank (copy) to end
 p               # paste
 ct<char>        # cut to character
+```
+
+# get me out of here
+
+```sh
 
 set -o emacs    # get me out of here
+
+```
+
+# Emacs
+
+Default bash option on
+the command line
+
+
+# Emacs
+
+```sh
+
+set -o | egrep 'vi |emacs'
+
+emacs          	on
+vi             	off
+
+```
+
+also has shortcuts
+
+```sh
+CTRL A        # beginning of line
+CTRL E        # end of line
+CTRL R        # reverse search
 ```
 
 
-# 1, 2, 3 example
+# How I started
+
+  puts "hello world"
+
+  hunt and peck typist
+
+  and
+
+    set -o vi
 
 
-# 1, 2, 3 example
+# It was my super power
+
+
+# 1, 2, 3 exercise
+
+
+# 1, 2, 3 exercise
 
   - pinned new actions to existing
 
@@ -193,6 +168,45 @@ set -o emacs    # get me out of here
 
 # Rote learning
 
+  - alphabet
+  - numbers
+  - ride a bike
+  - times tables
+
+
+# Test
+
+stop yourself from reading the next slide
+
+
+#
+
+  ruby
+
+
+#
+
+  beer
+
+
+# Rote learning
+
+  - language
+
+  rote learnt skills are important
+  to engage in higher level thinking
+
+
+# Second nature as a programmer
+
+  - touch typing
+  - keyboard shortcuts
+  - language (ruby, JS)
+  - technique - TDD
+
+
+# Rote learning
+
   1. come up with a script
     ```
     set -o vi
@@ -204,100 +218,36 @@ set -o emacs    # get me out of here
     ```
   1. repeat
 
-
-# Hey you said VI everywhere!
-
-  - [  ] main editor
+  PRACTICE, PRACTICE, PRACTICE
 
 
-# Hey you said VI everywhere!
+# Vi is my second nature
 
-  - [❌] main editor
+often find myself mashing the ESC key
 
+  ESC       # to get into normal mode
 
-# Hey you said VI everywhere!
-
-  - [❌] main editor
-  - [  ] browser extension (vimium)
+  ESC k     # to look at the last command
 
 
-# Hey you said VI everywhere!
+# DB console
 
-  - [❌] main editor
-  - [❌] browser extension (vimium)
+* or mash the keyboard
 
+<ESC> <ENTER> x 2
 
-# Hey you said VI everywhere!
+```sql
 
-  - [❌] main editor
-  - [❌] browser extension (vimium)
-  - [  ] slide (presenting.vim)
+SELECT * FROM users
+  JOIN roles users.role_id = role.id
+  WHERE role.name = 'admin';
 
-# Hey you said VI everywhere!
-
-  - [❌] main editor
-  - [❌] browser extension (vimium)
-  - [❌] slide (presenting.vim)
-
-
-# Hey you said VI everywhere!
-
-  - [❌] main editor
-  - [❌] browser extension (vimium)
-  - [❌] slide (presenting.vim)
-  - [  ] anywhere there is readline!
-
-
-# Hey you said VI everywhere!
-
-  - [❌] main editor
-  - [❌] browser extension (vimium)
-  - [❌] slide (presenting.vim)
-  - [👍] anywhere there is readline!
-
-
-# Ruby program input
-
-```sh
-ruby -e '\
-require "readline" \
-while line = Readline.readline("> ", true) \
-  p line \
-end'
 ```
 
+# Vi anywhere there is ReadLine
 
-# vi on command line
-
-  * iterative exploration
-      * find some data
-      * process it
-      * process it some more
-      * print a result
-  * laggy connections
-
-
-# REPL for various languages
-
-  * irb             # ruby REPL
-  * rails console
-  * python
-  * lein repl       # clojure REPL
-
-
-# Not all REPL support ReadLine
-
-  * node
-  * iex
-
-  ```sh
-
-    brew install rlwrap
-
-    rlwrap --always-readline node
-    rlwrap --always-readline iex
-
-  ```
+  Vi on the command line
+    and anywhere there is ReadLine
 
 
 # Postgresql database
@@ -323,15 +273,72 @@ end'
 
   ```
 
-* or mash the keyboard
 
-<ESC> <ENTER> x 2
+# What is ReadLine?
 
 
-# Iterative exploration example
+# Demo - ruby readline input
+
+```sh
+ruby -e '\
+require "readline" \
+while line = Readline.readline("> ", true) \
+  p line \
+end'
+```
+
+
+# ReadLine as REPL for various languages
+
+  * irb             # ruby REPL
+  * rails console
+  * python
+  * lein repl       # clojure REPL
+
+
+# Not all REPL's support ReadLine
+
+  * node
+  * iex
+
+  ```sh
+
+    brew install rlwrap
+
+    rlwrap --always-readline node
+    rlwrap --always-readline iex
+
+  ```
+
+
+# Time for a super power example?
 
   House price comparison
   between 2 suburbs in Melbourne
+
+
+# Your super power?
+
+  * vi shortcuts
+  * touch typing
+  * problem solving with TDD
+
+  PRACTICE, PRACTICE, PRACTICE
+
+
+# Thank You
+
+  Michael Milewski
+  @saramic twitter/github
+
+  Developer at Fresho!
+
+This presentation daily_dojo repo on github
+  https://github.com/saramic/daily_dojo
+
+
+# EARLY EXIT
+
 
 # house price comparison
 
