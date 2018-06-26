@@ -52,7 +52,9 @@
 
 # Why VI is called VI?
 
-  ex = line editor
+  ex short for EXtended
+
+  ex is a line editor
 
 
 # VI = VIsual
