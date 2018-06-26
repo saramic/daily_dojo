@@ -118,16 +118,13 @@ the command line
 # Emacs
 
 ```sh
-
 set -o | egrep 'vi |emacs'
 
 emacs          	on
 vi             	off
-
 ```
 
-also has shortcuts
-
+emacs shortcuts
 ```sh
 CTRL A        # beginning of line
 CTRL E        # end of line
@@ -144,6 +141,14 @@ CTRL R        # reverse search
   and
 
     set -o vi
+
+
+# It was my super power
+
+  * can move around quickly
+  * can do edits to whole commands
+  * cursor speed ok
+  * no need for aliases
 
 
 # It was my super power
