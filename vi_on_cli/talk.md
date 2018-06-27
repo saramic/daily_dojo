@@ -10,7 +10,7 @@
 
 # Fresho!
 
-  - **small** automous team
+  - **small** autonomous team
   - pairing / testing
   - daily active users
 
@@ -214,10 +214,10 @@ stop yourself from reading the next slide
 
 # Rote learning
 
-  1. come up with a script
+  1. come up with a drill
     ```
     set -o vi
-    rube -e 'puts "hello"'
+    ruby -e 'puts "hello"'
     <ESC> k $ b i
      RORO
     <RETURN>
