@@ -294,6 +294,17 @@ while line = Readline.readline("> ", true) \
 end'
 ```
 
+# Demo - python readline input
+
+```{py}
+python3 -c '
+import readline
+while True:
+  line = input(":")
+  if line == "stop":
+    break
+  print("%s" % line)'
+```
 
 # ReadLine as REPL for various languages
 
