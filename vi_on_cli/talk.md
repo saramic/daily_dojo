@@ -296,7 +296,7 @@ end'
 
 # Demo - python readline input
 
-```{py}
+```sh
 python3 -c '
 import readline
 while True:
