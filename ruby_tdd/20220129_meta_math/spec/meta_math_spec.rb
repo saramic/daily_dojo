@@ -19,6 +19,14 @@ RSpec.describe MetaMath do
       it { is_expected.to eq 2 }
     end
 
+    describe "one plus two plus three plus four plus five" do
+      it { is_expected.to eq 15 }
+    end
+
+    describe "fifteen plus six plus seven plus eight plus nine" do
+      it { is_expected.to eq 45 }
+    end
+
     describe "three times four" do
       it { is_expected.to eq 12 }
     end

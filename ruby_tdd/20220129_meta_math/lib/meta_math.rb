@@ -13,6 +13,12 @@ module MetaMath
     seven
     eight
     nine
+    ten
+    eleven
+    twelve
+    thirteen
+    fourteen
+    fifteen
   ].freeze
 
   NUMBERS.each_with_index do |number, index|
