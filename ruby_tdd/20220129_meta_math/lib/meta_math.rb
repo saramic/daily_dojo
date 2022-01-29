@@ -21,11 +21,14 @@ module MetaMath
     end
   end
 
-  def plus(arg)
-    ->(x) { x + arg }
-  end
+  OPERATIONS = {
+    times: :*,
+    plus: :+,
+  }.freeze
 
-  def times(arg)
-    ->(x) { x * arg }
+  OPERATIONS.each do |operation, operation_method|
+    define_method operation do |arg|
+      ->(x) { x.send(operation_method, arg) }
+    end
   end
 end
