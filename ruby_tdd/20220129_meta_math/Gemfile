@@ -9,3 +9,5 @@ gem "rspec", "~> 3.10"
 gem "rubocop", "~> 1.25"
 gem "rubocop-performance", "~> 1.13"
 gem "rubocop-rspec", "~> 2.8"
+
+gem "guard-rspec", "~> 4.7"

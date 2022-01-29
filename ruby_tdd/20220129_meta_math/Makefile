@@ -22,6 +22,10 @@ rubocop-fix:
 test:
 	bundle exec rspec
 
+.PHONY: test-watch
+test-watch:
+	bundle exec guard
+
 .PHONY: build
 build: rubocop test
 
@@ -43,6 +47,7 @@ usage:
 	@echo "${YELLOW}make rubocop${NC}       run rubocop"
 	@echo "${YELLOW}make rubocop-fix${NC}   apply rubocop -A fixes"
 	@echo "${YELLOW}make test${NC}          run rspec tests"
+	@echo "${YELLOW}make test-watch${NC}    run rspec tests using guard"
 	@echo "${YELLOW}make build${NC}         build command checking rubocop and tests"
 	@echo
 	@echo "Demo"
