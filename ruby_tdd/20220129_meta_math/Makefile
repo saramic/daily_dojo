@@ -35,7 +35,7 @@ demo:
 	./bin/meta_math_demo.rb 'one plus one'
 	./bin/meta_math_demo.rb 'three times four'
 	# ./bin/meta_math_demo.rb 'nine diveded by three'
-	# ./bin/meta_math_demo.rb 'five minus two'
+	./bin/meta_math_demo.rb 'five minus four'
 
 .PHONY: usage
 usage:

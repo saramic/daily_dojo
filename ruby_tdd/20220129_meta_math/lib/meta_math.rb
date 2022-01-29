@@ -24,6 +24,8 @@ module MetaMath
   OPERATIONS = {
     times: :*,
     plus: :+,
+    minus: :-,
+    divided: :/,
   }.freeze
 
   OPERATIONS.each do |operation, operation_method|

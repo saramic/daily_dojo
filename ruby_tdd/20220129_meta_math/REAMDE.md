@@ -22,10 +22,10 @@ expanded to all 4 basic math operators
 ```
 three times four
 => 12
-nine diveded by three
+nine divided by three
 => 3
-five minus two
-=> 3
+five minus one
+=> 4
 ```
 
 and being able to perform "LEFT TO RIGHT"
