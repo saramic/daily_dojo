@@ -19,6 +19,9 @@ Metrics/MethodLength:
 Metrics/BlockLength:
   Enabled: false
 
+RSpec/MultipleExpectations:
+  Max: 5
+
 Style/Documentation:
   Enabled: false
 

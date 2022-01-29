@@ -13,6 +13,10 @@ RSpec.describe MetaMath do
   end
 
   it "adds two numbers together" do
-    expect(one plus two).to eq 3 # rubocop:disable Style/NestedParenthesizedCalls
+    # rubocop:disable Style/NestedParenthesizedCalls
+    expect(one plus two).to eq 3
+    expect(two plus three).to eq 5
+    expect(four plus five).to eq 9
+    # rubocop:enable Style/NestedParenthesizedCalls
   end
 end

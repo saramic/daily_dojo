@@ -2,12 +2,23 @@
 
 # MetaMath module to allow english like math to happen
 module MetaMath
-  def one(args = nil)
-    args ? args.call(1) : 1
-  end
+  NUMBERS = %w[
+    zero
+    one
+    two
+    three
+    four
+    five
+    six
+    seven
+    eight
+    nine
+  ].freeze
 
-  def two
-    2
+  NUMBERS.each_with_index do |number, index|
+    define_method number do |arg = nil|
+      arg ? arg.call(index) : index
+    end
   end
 
   def plus(arg)
