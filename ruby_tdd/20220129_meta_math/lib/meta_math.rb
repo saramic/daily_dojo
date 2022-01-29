@@ -39,4 +39,8 @@ module MetaMath
       ->(x) { x.send(operation_method, arg) }
     end
   end
+
+  def by(arg)
+    arg
+  end
 end

@@ -31,17 +31,17 @@ RSpec.describe MetaMath do
       it { is_expected.to eq 12 }
     end
 
-    # describe "nine divided by three" do
-    #   it { is_expected.to eq 3 }
-    # end
-
-    # NOTE: temporary diveded till we get diveded by working above
-    describe "nine divided three" do
+    describe "nine divided by three" do
       it { is_expected.to eq 3 }
     end
 
-    describe "five minus one" do
+    # NOTE: "divided" is same as "divided by" as by is a pass through method
+    describe "twelve divided three" do
       it { is_expected.to eq 4 }
+    end
+
+    describe "five minus four" do
+      it { is_expected.to eq 1 }
     end
   end
 end
