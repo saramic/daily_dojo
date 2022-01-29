@@ -32,7 +32,8 @@ build: rubocop test
 .PHONY: demo
 demo:
 	./bin/meta_math_demo.rb 'one'
-	# ./bin/meta_math_demo.rb 'one plus one'
+	./bin/meta_math_demo.rb 'one plus one'
+	./bin/meta_math_demo.rb 'one plus two'
 	# ./bin/meta_math_demo.rb 'three times four'
 	# ./bin/meta_math_demo.rb 'nine diveded by three'
 	# ./bin/meta_math_demo.rb 'five minus two'

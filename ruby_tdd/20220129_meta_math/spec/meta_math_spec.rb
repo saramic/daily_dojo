@@ -11,4 +11,8 @@ RSpec.describe MetaMath do
   it "returns 2 for two" do
     expect(two).to eq 2
   end
+
+  it "adds two numbers together" do
+    expect(one plus two).to eq 3 # rubocop:disable Style/NestedParenthesizedCalls
+  end
 end
