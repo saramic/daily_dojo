@@ -7,4 +7,8 @@ RSpec.describe MetaMath do
   it "returns 1 for one" do
     expect(one).to eq 1
   end
+
+  it "returns 2 for two" do
+    expect(two).to eq 2
+  end
 end
