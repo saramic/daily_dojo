@@ -31,7 +31,7 @@ build: rubocop test
 
 .PHONY: demo
 demo:
-	echo "put demo program here bin/meta_math_demo.rb"
+	./bin/meta_math_demo.rb 'one'
 	# ./bin/meta_math_demo.rb 'one plus one'
 	# ./bin/meta_math_demo.rb 'three times four'
 	# ./bin/meta_math_demo.rb 'nine diveded by three'

@@ -1,5 +1,13 @@
 # Meta Math
 
+## Just run it
+
+```
+make build
+make demo
+./bin/meta_math_demo.rb 'one'
+```
+
 ## Problem statement
 
 Write a ruby program that can perform basic textual calculations like:
