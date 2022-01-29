@@ -24,4 +24,8 @@ module MetaMath
   def plus(arg)
     ->(x) { x + arg }
   end
+
+  def times(arg)
+    ->(x) { x * arg }
+  end
 end

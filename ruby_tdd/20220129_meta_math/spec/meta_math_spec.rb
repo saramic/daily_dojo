@@ -19,4 +19,16 @@ RSpec.describe MetaMath do
     expect(four plus five).to eq 9
     # rubocop:enable Style/NestedParenthesizedCalls
   end
+
+  describe "basic operations" do
+    subject(:expression) { eval self.class.description } # rubocop:disable Security/Eval
+
+    describe "one times three" do
+      it { is_expected.to eq 3 }
+    end
+
+    describe "three times three" do
+      it { is_expected.to eq 9 }
+    end
+  end
 end
