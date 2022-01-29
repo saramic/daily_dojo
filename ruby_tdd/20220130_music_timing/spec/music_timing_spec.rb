@@ -15,4 +15,13 @@ RSpec.describe MusicTiming do
       EOF_MUSIC_OUTPUT
     }
   end
+
+  describe "[1,0,1,0]" do
+    it {
+      expect(music_timing).to eq <<~EOF_MUSIC_OUTPUT.chomp
+        1     2 3     4
+        minim   minim
+      EOF_MUSIC_OUTPUT
+    }
+  end
 end
