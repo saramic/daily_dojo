@@ -33,6 +33,7 @@ build: rubocop test
 demo:
 	./bin/music_timig_demo.rb '[1,0,0,0]'
 	./bin/music_timig_demo.rb '[1,0,1,0]'
+	./bin/music_timig_demo.rb '[1,1,1,0]'
 
 .PHONY: usage
 usage:

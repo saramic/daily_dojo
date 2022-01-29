@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 class MusicTiming
+  NOTES = {
+    1 => "crotchet",
+    2 => "minim",
+    4 => "semibreve",
+  }.freeze
+
   def for(bar_notation)
     bar = parse_from(bar_notation)
     notes = convert_to_notes(bar)
@@ -18,13 +24,10 @@ class MusicTiming
     bar.each_with_index do |note, index|
       named_note = " "
       if note == 1
-        next_note = bar.slice(index + 1, bar.size - index).index(1) || (bar.size - index - 1)
-        named_note = case next_note
-                     when 1
-                       "minim"
-                     when 3
-                       "semibreve"
-                     end
+        note_length = bar.slice(index + 1, bar.size - index).index(1)
+        note_length += 1 if note_length
+        note_length ||= bar.size - index
+        named_note = NOTES[note_length]
       end
 
       notes[index + 1] = named_note
@@ -37,7 +40,7 @@ class MusicTiming
     output << notes.keys.map do |key|
       length = [notes[key]&.length || 0, key.digits.size].max
       format("%-#{length}s", key)
-    end.join(" ")
+    end.join(" ").rstrip
     output << notes.values.join(" ").rstrip
     output.join("\n")
   end
